@@ -13,7 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        SyncEngine.sharedSyncEngine.getLatest(base: ["base":"INR" as AnyObject]) { (response) in
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -23,6 +23,7 @@
         <scene sceneID="kbX-NQ-Rfx">
             <objects>
                 <viewController id="FGP-sA-jgn" customClass="ViewController" customModule="CurrencyConvertor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides/>
                     <view key="view" contentMode="scaleToFill" id="p5j-lA-hzD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,8 +190,12 @@
                         <viewLayoutGuide key="safeArea" id="nx2-iU-uTg"/>
                     </view>
                     <navigationItem key="navigationItem" id="Igy-JT-Mxy">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Item" image="App-Icon" landscapeImage="App-Icon" style="plain" id="uys-cg-ZPQ">
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <barButtonItem key="leftBarButtonItem" id="ykF-Ef-ACV">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Ng-or-cJY">
+                                <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="App"/>
+                            </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="7VP-jS-2up"/>
                     </navigationItem>
@@ -219,7 +224,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="App-Icon" width="36" height="36"/>
+        <image name="App" width="36" height="36"/>
         <image name="India" width="32" height="32"/>
         <image name="Plus" width="32" height="32"/>
     </resources>

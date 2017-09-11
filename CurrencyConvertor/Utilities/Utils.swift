@@ -30,4 +30,38 @@ class Utils: NSObject {
 	class func saveAuthorization(key :String) -> Void {
 		
 	}
+    
+    class func parseJsonToDictionary(data: Data) -> (AnyObject?,Error?) {
+        
+        let _ =  NSString(data: data, encoding:String.Encoding.utf8.rawValue)
+        
+        // Convert server json response to NSDictionary
+        do {
+            let JSONObject = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            return (JSONObject as AnyObject,nil)
+        } catch let error {
+            return (nil,error)
+        }
+        
+    }
+    
+    class func manageServerResponseError(source: AnyObject?) -> (AnyObject?,String?) {
+        var response : AnyObject?
+        var str : String?
+        if source != nil &&  source is [String : AnyObject] {
+            let statusNumber = source!["status"] as? NSNumber
+            let messageString = source!["message"] as? String
+            if ((statusNumber != nil) && (messageString != nil) && statusNumber != 200) == true {
+                str = messageString
+                response = nil
+            } else {
+                response = source
+                str = nil
+            }
+        } else{
+            response = source
+            str = nil
+        }
+        return (response,str)
+    }
 }

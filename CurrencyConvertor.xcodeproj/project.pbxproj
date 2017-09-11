@@ -15,7 +15,7 @@
 		69BD38B71F6604DD003C25AD /* APIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD38A31F6604BE003C25AD /* APIBase.swift */; };
 		69BD38B81F6604DD003C25AD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD38A41F6604BE003C25AD /* APIClient.swift */; };
 		69BD38B91F6604DD003C25AD /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD38A51F6604BE003C25AD /* APIRequest.swift */; };
-		69BD38BA1F6604DD003C25AD /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD38A71F6604BE003C25AD /* LoginAPI.swift */; };
+		69BD38BA1F6604DD003C25AD /* Latest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD38A71F6604BE003C25AD /* Latest.swift */; };
 		69BD38BB1F6604DD003C25AD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD38AB1F6604BE003C25AD /* Reachability.swift */; };
 		69BD38BC1F6604DD003C25AD /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD38AC1F6604BE003C25AD /* SyncEngine.swift */; };
 		69BD38BD1F6604DD003C25AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD389B1F6604BE003C25AD /* Constants.swift */; };
@@ -39,7 +39,7 @@
 		69BD38A31F6604BE003C25AD /* APIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBase.swift; sourceTree = "<group>"; };
 		69BD38A41F6604BE003C25AD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		69BD38A51F6604BE003C25AD /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		69BD38A71F6604BE003C25AD /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		69BD38A71F6604BE003C25AD /* Latest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Latest.swift; sourceTree = "<group>"; };
 		69BD38AB1F6604BE003C25AD /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		69BD38AC1F6604BE003C25AD /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
 		69BD38AE1F6604BE003C25AD /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		69BD38A61F6604BE003C25AD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				69BD38A71F6604BE003C25AD /* LoginAPI.swift */,
+				69BD38A71F6604BE003C25AD /* Latest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 				69BD38B71F6604DD003C25AD /* APIBase.swift in Sources */,
 				69BD38B81F6604DD003C25AD /* APIClient.swift in Sources */,
 				69BD38B91F6604DD003C25AD /* APIRequest.swift in Sources */,
-				69BD38BA1F6604DD003C25AD /* LoginAPI.swift in Sources */,
+				69BD38BA1F6604DD003C25AD /* Latest.swift in Sources */,
 				69BD38BB1F6604DD003C25AD /* Reachability.swift in Sources */,
 				69BD38BC1F6604DD003C25AD /* SyncEngine.swift in Sources */,
 				69BD38BD1F6604DD003C25AD /* Constants.swift in Sources */,

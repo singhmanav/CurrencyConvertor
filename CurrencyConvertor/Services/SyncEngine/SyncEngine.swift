@@ -26,14 +26,15 @@ class SyncEngine : NSObject {
 	
 // API Models
 	
-	func doLogin(info: [String: AnyObject]?,callback: ((_ response: AnyObject?) -> Void)?) -> Void {
+	func getLatest(base: [String: AnyObject]?,callback: ((_ response: AnyObject?) -> Void)?) -> Void {
 		
-		let loginAPI = LoginAPI()
-		loginAPI.callback = { response in
+		let latest = Latest()
+		latest.callback = { response in
 			if callback != nil { callback!(response) }
 		}
-		loginAPI.postLogin(info: info)
+		latest.getLatest(base: base)
 	}
+    
 }
 
 

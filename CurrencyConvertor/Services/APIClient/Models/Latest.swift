@@ -8,13 +8,13 @@
 
 import Foundation
 
-class LoginAPI: APIBase {
+class Latest: APIBase {
 	
-	func postLogin(info: [String: AnyObject]?) -> Void {
-		self.methodName = "/users/login"
+	func getLatest(base: [String: AnyObject]?) -> Void {
+		self.methodName = "/latest"
 		isExecuting = true
 		let urlPath = Configurations.getBaseURL() + methodName!
-		let request = APIRequest(methodType: .GET, URLString: urlPath, Parameters: nil)
+		let request = APIRequest(methodType: .GET, URLString: urlPath, Parameters: base)
 		request.execute { (response, error) in
 			self.isExecuting = false
             DispatchQueue.main.async {

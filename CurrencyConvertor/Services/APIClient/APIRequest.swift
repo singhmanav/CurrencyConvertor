@@ -17,6 +17,7 @@ class APIRequest: NSObject {
 	var headers: [String:String] = [:]
 	var session: URLSession!
 	private var callback : ((_ response: AnyObject?, _ error: Error?) -> Void)?
+    
 	
 	convenience internal init(methodType: HttpMethodType, URLString urlString: String, Parameters parameters: [String:AnyObject]?) {
 		self.init()
@@ -79,7 +80,7 @@ class APIRequest: NSObject {
 		let request = NSMutableURLRequest(url:requestURL! as URL);
 		// Set request HTTP method to GET or PUT
 		request.httpMethod = httpMethod!.typeString()
-		request.timeoutInterval = Double(Configurations.getTimeOutInterval())
+        request.timeoutInterval = Double.init(exactly: Configurations.getTimeOutInterval())!
 		if self.headers.count > 0 {
 			for (key, value) in self.headers {
 				request.setValue(value, forHTTPHeaderField: key)
@@ -111,11 +112,19 @@ class APIRequest: NSObject {
 				cb(nil, error!)
 			}
 		} else {
-			//TODO: Call Back Code
+            let parsedObject : (AnyObject?,Error?) = Utils.parseJsonToDictionary(data: data!)
+            let parseObject = parsedObject.0
+            let parseError = parsedObject.1
+            var response : (AnyObject?, String?)
+            response = Utils.manageServerResponseError(source: parseObject)
+            callback?(response.0, parseError)
+            if response.1 != nil  && self.showErrorAlert == true{
+                fatalError()
+            }
 		}
 	}
-	
-	private func verifySSLHostName() -> Bool {
+    
+    private func verifySSLHostName() -> Bool {
 		return Configurations.isSSLEnabled()
 	}
 }
