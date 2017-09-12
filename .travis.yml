@@ -1,0 +1,3 @@
+language: swift
+xcode_project: CurrencyConvertor.xcodeproj
+osx_image: xcode9
